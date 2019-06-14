@@ -44,9 +44,11 @@ public class LoginTest_ELTC_001 {
 		Thread.sleep(3000);
 		driver.quit();
 	}
+	
+	// Application allows user to get registered as Student
 	@Test
 	public void validLoginTest() {
-		loginPOM1.sendUserName("admin");
+		loginPOM1.sendUserName("admin");				 
 		loginPOM1.sendPassword("admin@123");
 		loginPOM1.clickLoginBtn(); 
 		screenShot.captureScreenShot("First");

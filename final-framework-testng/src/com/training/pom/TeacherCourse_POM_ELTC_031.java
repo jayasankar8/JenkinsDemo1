@@ -172,16 +172,32 @@ private WebDriver driver;
 		driver.findElement(By.xpath("//div//div/a[3]")).click();
 	}
  	
+ 	//---------------32 testcase-----------------------------------------
  	public void coursesBtn() {
 		driver.findElement(By.xpath("//*[@id=\'page']/div/div[2]/div/div/div[2]/h4/a")).click();
+		
 	}
  	
  	public void selecttestsBtn() {
 		driver.findElement(By.xpath("//div/a[@id='istooldesc_7800']")).click();
 	}
  	
- 	public void createnewtestBtn() {
-		driver.findElement(By.xpath("//div[@id=\'no-data-view']/div/a")).click();
+ 	
+ 	public void myCoursesBtn() {
+		driver.findElement(By.xpath("//*[@id='navbar']/ul[1]/li[2]/a")).click();
+	}
+ 	
+ 	
+ 	public void seleniumCourseBtn1() {
+		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/48/blackboard.png']")).click();
+	}
+ 	
+ 	public void testsBtn() {
+		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/64/quiz.png']")).click();
+	}
+ 	
+ 	public void createNewTestBtn() {
+		driver.findElement(By.xpath("//div[@id=\'no-data-view']/div/a")).click();  
 	}
  	
  	@FindBy(id="exercise_title")
@@ -306,11 +322,12 @@ private WebDriver driver;
 		
 	}
 	
-//---------------------- TeacherAddAssessment_ELTC_033 code started ------------------------
 	
+//---------------------- TeacherAddAssessment_ELTC_033 code started ------------------------
+	//sankar
 	
 	public void seleniumCourseBtn() {
-		//driver.findElement(By.xpath("//div//*[@id='page']/div/div[2]/div/div/div[2]/h4/a")).click();
+		
 		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/48/blackboard.png']")).click();
 		
 	}
@@ -389,7 +406,12 @@ private WebDriver driver;
 	}
 	
 
+
+	
+	
+	
 	/*---------------------------------- TeacherAddAssignChangeDefaultSettings_ELTC_034 ----------------------------------*/
+	
 	
 	public void selectAsignmentBtn() {
 		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/64/works.png']")).click();
@@ -433,18 +455,72 @@ private WebDriver driver;
 	}
  	
  	
-public void assignmentsCheck() {
+ 	public void assignmentsCheck() {
+ 		List<WebElement> check= driver.findElements(By.xpath("//input[@type='checkbox']"));
+		check.get(1).click();
 	
-		driver.findElement(By.xpath("//input[@id='jqg_workList_40' and @type='checkbox']")).click();
+		//driver.findElement(By.xpath("//input[@type='checkbox']")).click();
 
 		}
 
 	
+
+
+//---------------------- TeacherAddAssessment_ELTC_035 code started ------------------------
+
+
+ 	
+	public void myCoursesTab() {
+		driver.findElement(By.xpath("//*[@id='navbar']/ul[1]/li[2]/a")).click();
+	}
+	
+	public void courseBtn() {
+		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/48/blackboard.png']")).click();
+	}
+	
+	//selecting assignments by the Teacher
+	public void assignmentsBtn() {
+		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/64/works.png']")).click();
+	}                                            
+	
+	public void selectAssignment() {
+		driver.findElement(By.xpath("//*[@id='56']/td[3]/a")).click();
+		
+	}
+	
+	public void correctRateBtn() {
+		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/22/rate_work.png']")).click();
+	}											 
+	
+	@FindBy(xpath="//*[@id='qualification']")
+ 	private WebElement score;
+ 	public void scorevalue(String scorevalue) {
+ 		this.score.clear();
+ 		this.score.sendKeys(scorevalue);
+ 	}
+ 	
+ 	
+	
+ 	@FindBy(xpath="//*[@id='work_comment_button']")
+	private WebElement sendmsg; 
+	public void sendMssgBtn() {
+		this.sendmsg.click(); 
+	}
+	
+	@FindBy(xpath="//*[@id='cm-content']/div/ul/li[3]/a")
+	private WebElement assignment; 
+	public void selectAssignmentName() {
+		this.sendmsg.click(); 
+	}
+	
+	public void selectAssignmentNamelink() {
+		driver.get("http://elearningm1.upskills.in/main/work/work_list_all.php?cidReq=SEL&id_session=0&gidReq=0&gradebook=0&origin=&id=56&");
+		driver.findElement(By.linkText("selenium100")).click();
+		//this.sendmsg.click(); 
+	}
+
 }
 
-
- 	
- 	
  	
  	
  	

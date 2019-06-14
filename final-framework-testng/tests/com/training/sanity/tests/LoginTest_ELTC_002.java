@@ -45,6 +45,9 @@ public class LoginTest_ELTC_002 {
 		Thread.sleep(2000);
 		driver.quit();
 	}
+	
+	// application allows the student to get logged in by entering valid credentials
+	
 	@Test
 	public void validLoginTest() {
 		loginPOM.sendUserName("Jayasankar");

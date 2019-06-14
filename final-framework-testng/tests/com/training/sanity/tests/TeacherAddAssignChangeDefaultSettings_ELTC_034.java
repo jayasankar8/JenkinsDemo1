@@ -46,6 +46,8 @@ public class TeacherAddAssignChangeDefaultSettings_ELTC_034 {
 		Thread.sleep(3000);
 		driver.quit();
 	}
+	
+	//Verify whether application allows teacher to add assignments.
 	@Test
 	public void validLoginTest() throws InterruptedException {
 		TeacherCoserDescrpPOM1.sendUserName("teacher");

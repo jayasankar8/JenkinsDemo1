@@ -46,6 +46,8 @@ public class TeacherAddAssessment_ELTC_033 {
 		Thread.sleep(3000);
 		driver.quit();
 	}
+	
+	// application allows the teacher to add assessment as online activity & Attach certificate.
 	@Test
 	public void validLoginTest() throws InterruptedException {
 		TeacherCoserDescrpPOM1.sendUserName("teacher");
@@ -56,7 +58,6 @@ public class TeacherAddAssessment_ELTC_033 {
 		TeacherCoserDescrpPOM1.selectAddonlineActivityBtn();
 		TeacherCoserDescrpPOM1.ActivityTests();
 		TeacherCoserDescrpPOM1.ActivityOnlinequiz();
-		
 		TeacherCoserDescrpPOM1.textWeight("1");
 		TeacherCoserDescrpPOM1.AddActivityAssessmentBtn();
 		TeacherCoserDescrpPOM1.EditActivity();
@@ -66,3 +67,5 @@ public class TeacherAddAssessment_ELTC_033 {
 		screenShot.captureScreenShot("ELTC_33");
 	} 
 }
+
+

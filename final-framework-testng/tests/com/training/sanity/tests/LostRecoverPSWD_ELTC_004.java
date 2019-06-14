@@ -45,6 +45,8 @@ public class LostRecoverPSWD_ELTC_004 {
 		Thread.sleep(3000);
 		driver.quit();
 	}
+	//Application allows the student to recover password in I lost my password page
+	
 	@Test
 	public void validLoginTest() {
 		

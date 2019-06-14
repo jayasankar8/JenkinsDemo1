@@ -44,16 +44,19 @@ public class TeacherCreateTest_ELTC_032 {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(3000);
-		//driver.quit();
+		driver.quit();
 	}
 	@Test
 	public void validLoginTest() throws InterruptedException {
 		TeacherCoserDescrpPOM1.sendUserName("teacher");
 		TeacherCoserDescrpPOM1.sendPassword("teacher123");
 		TeacherCoserDescrpPOM1.clickLoginBtn(); 
-		TeacherCoserDescrpPOM1.coursesBtn();				//selecting course name
-		TeacherCoserDescrpPOM1.selecttestsBtn();		    // to selecting check box and date
-		TeacherCoserDescrpPOM1.createnewtestBtn();
+		TeacherCoserDescrpPOM1.myCoursesBtn();
+		TeacherCoserDescrpPOM1.seleniumCourseBtn1();
+		//TeacherCoserDescrpPOM1.coursesBtn();				//selecting course name
+		TeacherCoserDescrpPOM1.testsBtn();
+		//TeacherCoserDescrpPOM1.selecttestsBtn();		    // to selecting check box and date
+		TeacherCoserDescrpPOM1.createNewTestBtn();
 		TeacherCoserDescrpPOM1.testName("online quiz"); 	//enter name of the test
 		TeacherCoserDescrpPOM1.advancedsettingsBtn();
 		TeacherCoserDescrpPOM1.insertdescriptionText("quiz");
@@ -79,10 +82,10 @@ public class TeacherCreateTest_ELTC_032 {
 		TeacherCoserDescrpPOM1.questionTestBtn();
 		TeacherCoserDescrpPOM1.previewBtn();
 		TeacherCoserDescrpPOM1.clickStartTestBtn();
-		TeacherCoserDescrpPOM1.answersoptionRDBtn(1);  //First question answer radio button click
+		TeacherCoserDescrpPOM1.answersoptionRDBtn(0);  //First question answer radio button click
 		TeacherCoserDescrpPOM1.clickNextQuesBtn();
-		TeacherCoserDescrpPOM1.answersoptionRDBtn(0);  //second question answer radio button click
+		TeacherCoserDescrpPOM1.answersoptionRDBtn(1);  //second question answer radio button click
 		TeacherCoserDescrpPOM1.clickEndTestBtn();
-		screenShot.captureScreenShot("ELTC_32");
+		screenShot.captureScreenShot("ELTC_32"); 
 	} 
 }

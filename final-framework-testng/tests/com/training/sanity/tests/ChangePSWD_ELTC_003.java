@@ -45,6 +45,9 @@ public class ChangePSWD_ELTC_003 {
 		Thread.sleep(2000);
 		driver.quit();
 	}
+	
+	// Application allows the user to change the password in Edit Profile page
+	
 	@Test
 	public void validLoginTest() {
 		loginPOM.sendUserName("Jayasankar");
