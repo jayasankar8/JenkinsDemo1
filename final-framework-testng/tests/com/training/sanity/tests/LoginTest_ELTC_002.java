@@ -43,7 +43,7 @@ public class LoginTest_ELTC_002 {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(2000);
-		driver.quit();
+		//driver.quit();
 	}
 	
 	// application allows the student to get logged in by entering valid credentials
@@ -53,6 +53,13 @@ public class LoginTest_ELTC_002 {
 		loginPOM.sendUserName("Jayasankar");
 		loginPOM.sendPassword("sankar123");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("ELTC_002");
+		//screenShot.captureScreenShot("ELTC_00");
+		// need to remove the below code after completion
+		
+		
+		
+		
+		
+		
 	}
 }

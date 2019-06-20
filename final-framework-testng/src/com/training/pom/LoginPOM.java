@@ -19,7 +19,7 @@ public class LoginPOM {
 	@FindBy(id="password")
 	private WebElement password;
 	
-	@FindBy(id="formLogin_submitAuth")
+	@FindBy(id="form-login_submitAuth")
 	private WebElement loginBtn; 
 	
 	public void sendUserName(String userName) {
@@ -30,6 +30,15 @@ public class LoginPOM {
 	public void sendPassword(String password) {
 		this.password.clear(); 
 		this.password.sendKeys(password); 
+	}
+	
+	public String getUserName() {
+		return this.userName.getAttribute("value");			//fetching user name from application     
+		
+	}
+	
+	public String getPassword() {
+		return this.password.getAttribute("value"); 		//fetching password from application
 	}
 	
 	public void clickLoginBtn() {

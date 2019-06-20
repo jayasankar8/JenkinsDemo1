@@ -197,7 +197,7 @@ private WebDriver driver;
 	}
  	
  	public void createNewTestBtn() {
-		driver.findElement(By.xpath("//div[@id=\'no-data-view']/div/a")).click();  
+		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/32/new_exercice.png']")).click();  
 	}
  	
  	@FindBy(id="exercise_title")
@@ -257,12 +257,29 @@ private WebDriver driver;
 		body1.sendKeys(inserttext1);
 		driver.switchTo().defaultContent();
 	}
+ 	@FindBy(xpath="//*[@id='cke_3_contents']/iframe")
+	private WebElement insertbesidetext3;
+ 	public void insertTextInObjectivebesideTextBox3(String insertbesidetext1) {
+		driver.switchTo().frame(insertbesidetext3);
+		WebElement body1 = driver.switchTo().activeElement();
+		body1.sendKeys(insertbesidetext1);
+		driver.switchTo().defaultContent();
+	}
+ 	
  	@FindBy(xpath="//*[@id='cke_4_contents']/iframe")
 	private WebElement inserttext4;
  	public void insertTextInObjectiveTextBox4(String inserttext1) {
 		driver.switchTo().frame(inserttext4);
 		WebElement body1 = driver.switchTo().activeElement();
 		body1.sendKeys(inserttext1);
+		driver.switchTo().defaultContent();
+	}
+ 	@FindBy(xpath="//*[@id='cke_5_contents']/iframe")
+	private WebElement insertbesidetext5;
+ 	public void insertTextInObjectivebesideTextBox5(String insertbesidetext1) {
+		driver.switchTo().frame(insertbesidetext5);
+		WebElement body1 = driver.switchTo().activeElement();
+		body1.sendKeys(insertbesidetext1);
 		driver.switchTo().defaultContent();
 	}
  	@FindBy(xpath="//*[@id='cke_6_contents']/iframe")
@@ -273,21 +290,34 @@ private WebDriver driver;
 		body1.sendKeys(inserttext1);
 		driver.switchTo().defaultContent();
 	}
+ 	@FindBy(xpath="//*[@id='cke_7_contents']/iframe")
+	private WebElement insertbesidetext7;
+ 	public void insertTextInObjectivebesideTextBox7(String insertbesidetext1) {
+		driver.switchTo().frame(insertbesidetext7);
+		WebElement body1 = driver.switchTo().activeElement();
+		body1.sendKeys(insertbesidetext1);
+		driver.switchTo().defaultContent();
+	}
  	@FindBy(xpath="//*[@id='cke_8_contents']/iframe")
 	private WebElement inserttext8;
  	public void insertTextInObjectiveTextBox8(String inserttext1) {
 		driver.switchTo().frame(inserttext8);
 		WebElement body1 = driver.switchTo().activeElement();
 		body1.sendKeys(inserttext1);
-		
 		driver.switchTo().defaultContent();
 	}
- 	
+ 	@FindBy(xpath="//*[@id='cke_9_contents']/iframe")
+	private WebElement insertbesidetext9;
+ 	public void insertTextInObjectivebesideTextBox9(String insertbesidetext1) {
+		driver.switchTo().frame(insertbesidetext9);
+		WebElement body1 = driver.switchTo().activeElement();
+		body1.sendKeys(insertbesidetext1);
+		driver.switchTo().defaultContent();
+	}
  	public void answersRDBtn(int indexradiobtn) {
  			List<WebElement> rbtlist=driver.findElements(By.name("correct"));
  			rbtlist.get(indexradiobtn).click();
- 			 		
-	}
+ 	}
  	
  	public void questionTestBtn() {
 		driver.findElement(By.xpath("//*[@id=\'submit-question']")).click();
@@ -299,7 +329,6 @@ private WebDriver driver;
  	
  	}
  	
-
  	@FindBy(xpath="//*[@id='cm-content']/div/div[2]/div[2]/div/a")
 	private WebElement startTestBtn; 
 	public void clickStartTestBtn() {
@@ -324,7 +353,6 @@ private WebDriver driver;
 	
 	
 //---------------------- TeacherAddAssessment_ELTC_033 code started ------------------------
-	//sankar
 	
 	public void seleniumCourseBtn() {
 		
@@ -405,13 +433,7 @@ private WebDriver driver;
 		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/32/certificate.png']")).click();
 	}
 	
-
-
-	
-	
-	
 	/*---------------------------------- TeacherAddAssignChangeDefaultSettings_ELTC_034 ----------------------------------*/
-	
 	
 	public void selectAsignmentBtn() {
 		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/64/works.png']")).click();
@@ -463,14 +485,7 @@ private WebDriver driver;
 
 		}
 
-	
-
-
-//---------------------- TeacherAddAssessment_ELTC_035 code started ------------------------
-
-
- 	
-	public void myCoursesTab() {
+ 	public void myCoursesTab() {
 		driver.findElement(By.xpath("//*[@id='navbar']/ul[1]/li[2]/a")).click();
 	}
 	
@@ -518,10 +533,104 @@ private WebDriver driver;
 		driver.findElement(By.linkText("selenium100")).click();
 		//this.sendmsg.click(); 
 	}
+	public void clickImageOut() {
+		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/32/unknown.png']")).click();
+	}											 
+	
 
-}
-
+	@FindBy(xpath="//*[@id='logout_button']")
+	private WebElement logOutBtn;
+	public void logOutBtn() {
+		//driver.get("http://elearningm1.upskills.in/main/work/work_list_all.php?cidReq=SEL&id_session=0&gidReq=0&gradebook=0&origin=&id=56&");
+		//driver.findElement(By.linkText("selenium100")).click();
+		this.logOutBtn.click();
+	} 
+	
+	@FindBy(id="login")
+	private WebElement userName1; 
+	public void sendUserName1(String userName) {
+		this.userName.clear();
+		this.userName1.sendKeys(userName);
+	}
+	
+	@FindBy(id="password")
+	private WebElement password1;
+	public void sendPassword1(String password) {
+		this.password1.clear(); 
+		this.password1.sendKeys(password); 
+	}
+	
+	@FindBy(id="form-login_submitAuth")
+	private WebElement loginBtn1; 
+	public void clickLoginBtn1() {
+		this.loginBtn1.click(); 
+	}
+	
+	//selecting course catlog 
+	@FindBy(xpath="//*[@id='coursesCollapse']/div/ul/li[3]/a")
+	private WebElement courseCatlogBtn;
+	public void courseCatlogBtn() {
+		this.courseCatlogBtn.click();
+	}
+/*	
+	@FindBy(xpath="//*[@id='coursesCollapse']/div/ul/li[3]/a")
+	private WebElement courseCatlogBtn;
+	public void courseCatlogBtn() {
+		this.courseCatlogBtn.click();
+	}*/
+	
+	@FindBy(xpath="//*[@id='cm-content']/div/div[1]/div/div/div/div[1]/form/div/input")
+ 	private WebElement coursename;
+ 	public void courseName(String text) {
+ 		this.coursename.clear();
+ 		this.coursename.sendKeys(text);
+ 	}
+	
+ 	@FindBy(xpath="//*[@id='cm-content']/div/div[1]/div/div/div/div[1]/form/div/div/button")
+	private WebElement courSearchBtn;
+	public void courseSearchBtn() {
+		this.courSearchBtn.click();
+	}
+	
+	@FindBy(xpath="//*[@id='cm-content']/div/div[2]/div[2]/div/div[2]/div[4]/div/a")
+	private WebElement subscribeBtn;
+	public void courseSubBtn() {
+		this.subscribeBtn.click();
+	}
  	
+	@FindBy(xpath="//*[@id='navbar']/ul[1]/li[2]/a")
+	private WebElement mycoursebtn;
+	public void mycourseBtn() {
+		this.mycoursebtn.click();
+	}
+	public void reportingTab() {
+		driver.findElement(By.xpath("//*[@id='navbar']/ul[1]/li[4]/a")).click();
+	}
+	public void selectFollowedbyStudentslink() {
+		driver.get("http://elearningm1.upskills.in/main/mySpace/student.php");
+		}
+	
+	@FindBy(xpath="//*[@id='search_user_keyword']")
+ 	private WebElement keyword;
+ 	public void keyword(String text) {
+ 		this.keyword.clear();
+ 		this.keyword.sendKeys(text);
+ 	}
+ 	@FindBy(xpath="//*[@id='search_user_submit']")
+	private WebElement studentSearchbtn;
+	public void studentSearchbtn() {
+		this.studentSearchbtn.click();
+	}
+ 	
+ 	public void clickStudentDetails() {
+		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/22/2rightarrow.png']")).click();
+	}
+ 	
+ 		public void clickCourseDetails() {
+		driver.findElement(By.xpath("//img[@src='http://elearningm1.upskills.in/main/img/icons/22/2rightarrow.png']")).click();
+	}
+ 	 	
+}
  	
  	
   	

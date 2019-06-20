@@ -10,10 +10,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-public class LoginPOM_ELTC_001 {
-private WebDriver driver; 
+import com.training.dataproviders.LoginDataProviders;
+
+public class ComplextTestsPOM {
+ 
+  private WebDriver driver; 
 	
-	public LoginPOM_ELTC_001(WebDriver driver) {
+	public ComplextTestsPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
@@ -114,42 +117,7 @@ private WebDriver driver;
 		this.submit.click();
 	} 
 	
-	//*****************************************
 	
-	@FindBy(id="firstname")
-	private WebElement getFirstName;
-	public String getFirstName() {
-		return this.getFirstName.getAttribute("value");
-	}
 	
-	@FindBy(id="lastname")
-	private WebElement getlastName;
-	public String getLastName() {
-		return this.getlastName.getAttribute("value");
-	}
-	
-	@FindBy(id="email")
-	private WebElement getEmail;
-	public String getEmail() {
-		return this.getEmail.getAttribute("value");
-	}
-	
-	@FindBy(id="username")  //
-	private WebElement getstUserName;
-	public String getRegUserName() {
-		return this.getstUserName.getAttribute("value");
-	}
-	
-	@FindBy(id="password")
-	private WebElement getpassword;
-	public String getPassword() {
-		return this.getpassword.getAttribute("value");
-	}
-	
-	@FindBy(id="phone")
-	private WebElement getphone;
-	public String getphone() {
-		return this.phone.getAttribute("value");
-	}
 	
 }

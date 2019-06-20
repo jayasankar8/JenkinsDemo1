@@ -16,6 +16,7 @@ import com.training.dao.ELearningDAO;
 import com.training.dataproviders.LoginDataProviders;
 import com.training.generics.ScreenShot;
 import com.training.pom.LoginPOM;
+import com.training.pom.LoginPOM_ELTC_001;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -35,7 +36,7 @@ public class LoginExcelTest {
 
 	@BeforeMethod
 	public void setUp() throws Exception {
-		driver = DriverFactory.getDriver(DriverNames.CHROME);
+		driver = DriverFactory.getDriver(DriverNames.FIREFOX);
 		loginPOM = new LoginPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver);
@@ -45,10 +46,10 @@ public class LoginExcelTest {
 
 	@AfterMethod
 	public void tearDown() throws Exception {
-		driver.quit();
+		//driver.quit();
 	}
 
-	@Test(dataProvider = "excel-inputs", dataProviderClass = LoginDataProviders.class)
+	@Test(dataProvider = "excel-inputs2", dataProviderClass = LoginDataProviders.class)
 	public void loginDBTest(String userName, String password) {
 		loginPOM.sendUserName(userName);
 		loginPOM.sendPassword(password);
@@ -57,4 +58,6 @@ public class LoginExcelTest {
 
 	}
 
+	
+	
 }
